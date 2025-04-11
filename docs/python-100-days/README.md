@@ -4,7 +4,7 @@
 >
 > **说明**：如果访问 GitHub 比较慢的话，可以关注我的知乎号（[**Python-Jack**](https://www.zhihu.com/people/jackfrued)），上面的[“**从零开始学Python**”](<https://zhuanlan.zhihu.com/c_1216656665569013760>)专栏（对应本项目前 20 天的内容）比较适合初学者，其他的专栏如“[**数据思维和统计思维**](https://www.zhihu.com/column/c_1620074540456964096)”、“[**基于Python的数据分析**](https://www.zhihu.com/column/c_1217746527315496960)”、“[**说走就走的AI之旅**](https://www.zhihu.com/column/c_1628900668109946880)”等也在持续创作和更新中，欢迎大家关注、点赞和评论。如果希望免费学习打卡或者参与问题讨论，可以加入下面的 QQ 交流群（三个群加一个即可），请不要重复加群，也不要在群里发布广告和其他色情、低俗或敏感内容。如果有付费学习或付费咨询的需求，可以添加我的私人微信（微信号：**jackfrued**），备注好自己的称呼和需求，我会为大家提供力所能及的帮助。
 >
-> <img src="res/python_study_qq_group.png" style="zoom:30%;">
+> <img src="./res/python_study_qq_group.png" style="zoom:30%;">
 >
 > 本项目对应的部分视频已经同步到 [Bilibili](https://space.bilibili.com/1177252794)，有兴趣的小伙伴可以点赞、投币、关注，一键三连支持一下！
 
@@ -244,13 +244,13 @@ Python在以下领域都有用武之地。
 3. 包管理工具pip
 4. 使用网络API获取数据
 
-#### Day23 - [Python读写CSV文件](23.Python读写CSV文件.md)
+#### Day23 - Python读写CSV文件
 
 1. CSV文件介绍
 2. 将数据写入CSV文件
 3. 从CSV文件读取数据
 
-#### Day24 - [Python读写Excel文件-1](./Day21-30/24.用Python读写Excel文件-1.md)
+#### Day24 - Python读写Excel文件-1
 
 1. Excel简介
 2. 读Excel文件
@@ -784,7 +784,7 @@ Python在以下领域都有用武之地。
 1. 模型评估
 1. 模型部署
 
-### Day91~99 - [团队项目开发](./Day91-100)
+### Day91~99 - 团队项目开发
 
 #### 第91天：[团队项目开发的问题和解决方案](./Day91-100/91.团队项目开发的问题和解决方案.md)
 
@@ -833,7 +833,7 @@ Python在以下领域都有用武之地。
 
      ![](./res/pylint.png)
 
-   - Python中的一些“惯例”（请参考[《Python惯例-如何编写Pythonic的代码》](./番外篇/Python编程惯例.md)）
+   - Python中的一些“惯例”（请参考《Python惯例-如何编写Pythonic的代码》）
 
    - 影响代码可读性的原因：
 
