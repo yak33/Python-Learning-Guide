@@ -1,0 +1,352 @@
+/* 全局样式变量和基础样式 */
+:root {
+  --vp-c-brand: #3572A5;
+  --vp-c-brand-light: #4584B7;
+  --vp-c-brand-lighter: #5596C9;
+  --vp-c-brand-dark: #2A5985;
+  --vp-c-brand-darker: #1F4266;
+  
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #3572A5 30%, #FFD43B);
+  
+  --vp-c-text-code: #5596C9;
+  
+  /* 自定义颜色 */
+  --python-yellow: #FFD43B;
+  --python-blue: #3572A5;
+}
+
+/* Hero 部分样式增强 */
+.VPHero {
+  position: relative;
+  overflow: hidden;
+}
+
+.VPHero::before {
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: -25%;
+  left: -25%;
+  background: radial-gradient(circle at center, rgba(53, 114, 165, 0.05) 0%, transparent 70%);
+  z-index: -1;
+}
+
+.VPHero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.VPHero .name {
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.VPHero .text {
+  font-size: 2rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.VPHero .name::after,
+.VPHero .text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--python-blue), transparent);
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.VPHero .name:hover::after,
+.VPHero .text:hover::after {
+  transform: scaleX(0.7);
+}
+
+.VPHero .name:hover,
+.VPHero .text:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 5px 15px rgba(53, 114, 165, 0.3);
+}
+
+/* Logo样式优化 */
+.VPHero .image-container {
+  /* margin-top: -10px; */
+  margin-bottom: -20px;
+  margin-left: -50px;
+  position: relative;
+}
+
+/* 添加伪元素实现渐变阴影效果 */
+.VPHero .image-container::before {
+  /* content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at center, rgba(53, 114, 165, 0.3) 0%, transparent 70%);
+  filter: blur(20px);
+  z-index: -1;
+  transform: translateY(10px) scale(0.9);
+  opacity: 0.8;
+  transition: all 0.5s ease; */
+}
+
+.VPHero .image-container:hover::before {
+  /* opacity: 1;
+  transform: translateY(15px) scale(1);
+  filter: blur(25px);
+  background: radial-gradient(circle at center, rgba(53, 114, 165, 0.5) 0%, rgba(255, 212, 59, 0.3) 70%, transparent 100%); */
+}
+
+.VPHero .image-container img {
+  /* 使用多层drop-shadow创建更丰富的阴影效果 */
+  filter: 
+    drop-shadow(0 15px 30px rgba(53, 114, 165, 0.3))
+    drop-shadow(0 5px 15px rgba(53, 114, 165, 0.4))
+    drop-shadow(0 2px 5px rgba(53, 114, 165, 0.5));
+  transition: all 0.5s ease;
+  max-width: 250px !important;
+  height: auto !important;
+  animation: none;
+  position: relative;
+  z-index: 2;
+}
+
+.VPHero .image-container img:hover {
+  /* transform: scale(1.02); */
+  transform-origin: center center;
+  filter: 
+    drop-shadow(0 20px 40px rgba(53, 114, 165, 0.4))
+    drop-shadow(0 10px 20px rgba(53, 114, 165, 0.5))
+    drop-shadow(0 5px 10px rgba(255, 212, 59, 0.3));
+}
+
+/* Features 部分样式增强 */
+.VPFeature {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: default;
+  text-decoration: none;
+  color: var(--vp-c-text-1);
+}
+
+.VPFeature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(53, 114, 165, 0.15);
+  border-color: var(--vp-c-brand-light);
+}
+
+.VPFeature .icon {
+  font-size: 28px;
+  background: linear-gradient(120deg, var(--python-blue), var(--python-yellow));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+
+.VPFeature .title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  color: var(--vp-c-brand);
+}
+
+.VPFeature .details {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* 自定义布局内容样式 */
+.custom-layout {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  background: linear-gradient(90deg, var(--python-blue), var(--python-yellow));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  right: 25%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--python-blue), var(--python-yellow));
+  border-radius: 3px;
+}
+
+/* 统计信息样式 */
+.stats-container {
+  margin: 4rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(53, 114, 165, 0.15);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--python-blue);
+  margin-bottom: 0.5rem;
+}
+
+.stat-text {
+  font-size: 1.1rem;
+  color: var(--vp-c-text-1);
+}
+
+/* 学习路径卡片样式 */
+.learning-paths-container {
+  margin: 4rem 0;
+}
+
+.learning-paths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.learning-path-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: var(--vp-c-text-1);
+}
+
+.learning-path-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(53, 114, 165, 0.2);
+  background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(53, 114, 165, 0.05));
+  border-color: var(--vp-c-brand-light);
+}
+
+.path-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.path-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  color: var(--vp-c-brand);
+}
+
+.path-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* 代码示例样式 */
+.code-example-container {
+  margin: 4rem 0;
+}
+
+.code-block {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.code-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--python-blue), var(--python-yellow));
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+.code-block code {
+  color: #f8f8f2;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .stats-grid, .learning-paths-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-item, .learning-path-card {
+    padding: 1.2rem;
+  }
+  
+  .section-title h2 {
+    font-size: 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+

@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  },
+  "scripts": {
+    "setup:pnpm": "pnpm install",
+    "docs:dev": "vitepress dev docs --open",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs --open",
+    "postinstall": "echo \"安装完成! 运行 npm run docs:dev 启动开发服务器\""
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
